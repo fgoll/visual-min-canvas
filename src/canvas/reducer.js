@@ -1,12 +1,12 @@
 import { ADD_GRAPH, REMOVE_GRAPH } from "./actionTypes";
 
 export default (state=[], action) => {
-  switch (action.action) {
+  switch (action.type) {
     case ADD_GRAPH: 
       return [
         {
           id: action.id,
-          type: action.type,
+          action: action.action,
           attr: action.attr
         },
         ...state

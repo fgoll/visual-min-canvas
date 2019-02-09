@@ -2,9 +2,9 @@ import { ADD_GRAPH } from "./actionTypes";
 
 let nextToId = 0
 
-const add_graph = (type, attr) => ({
-  action: ADD_GRAPH,
-  type,
+export const addGraph = (action, attr) => ({
+  action,
+  type: ADD_GRAPH,
   attr,
   id: ++nextToId
 })

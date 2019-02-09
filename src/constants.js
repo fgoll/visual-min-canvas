@@ -1,5 +1,11 @@
 export const GraphTypes = {
-  LINE: '直线',
-  RECT: '矩形',
-  CIRCLE: '圆形'
+  LINE: 'Line',
+  RECT: 'Rect',
+  CIRCLE: 'Circle'
 }
+
+export const graphs = [
+  GraphTypes.LINE,
+  GraphTypes.RECT,
+  GraphTypes.CIRCLE
+]

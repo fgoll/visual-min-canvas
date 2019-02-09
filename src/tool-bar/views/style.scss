@@ -3,19 +3,27 @@
   width: 160px;
   height: 100%;
 
-  .tool-col {
+  .tool {
     width: 50%;
     padding: 20px 10px;
   }
 
-  .priority-col {
+  .priority {
     width: 50%;
     padding: 20px 10px;
+
+    &__item {
+      padding: 10px;
+      font-size: 12px;
+    }
   }
 
   &__item {
     padding: 10px;
     margin-bottom: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    
     &.active {
       color: #0084FF;
       position: relative;

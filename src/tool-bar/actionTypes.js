@@ -1,1 +1,2 @@
-export const 
+export const SET_ACTION = 'TOOLBAR/SET_ACTION'
+export const REMOVE_ACTION = 'TOOLBAR/REMOVE_ACTION'

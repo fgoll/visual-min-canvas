@@ -1,3 +1,4 @@
-import view from './view'
+import view from './views/tool-bar'
+import reducer from './reducer'
 
-export {view}
+export {view, reducer}
