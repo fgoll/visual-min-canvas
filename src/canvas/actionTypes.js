@@ -1,0 +1,2 @@
+export const ADD_GRAPH = 'CANVAS/ADD_GRAPH'
+export const REMOVE_GRAPH = 'CANVAS/REMOVE_GRAPH'
