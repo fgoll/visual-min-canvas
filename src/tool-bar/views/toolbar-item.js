@@ -28,7 +28,7 @@ Link.propTypes = {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    active: state.action === ownProps.action
+    active: state.tool.action === ownProps.action
   }
 }
 

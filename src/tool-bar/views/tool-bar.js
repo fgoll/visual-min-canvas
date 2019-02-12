@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import Link from './link'
+import ToolbarItem from './toolbar-item'
+import PriorityItem from './priority-item'
 import { graphs } from '../../constants'
 import './style.scss'
 
@@ -10,15 +11,16 @@ const ToolBar = ({currentGraphs}) => {
     <div className='toolbar'>
       <div className='tool'>
         {graphs.map(item => {
-          return <Link action={item} key={item}>{item}</Link>
+          return <ToolbarItem action={item} key={item}>{item}</ToolbarItem>
         })}
       </div>
       <div className='priority'>
         {currentGraphs.map(item => {
           return (
-            <div className='priority__item' key={item.id}>
-              {item.action}
-            </div>
+            <PriorityItem key={item.id} id={item.id} action={item.action}>{item.action}</PriorityItem>
+            // <div className='priority__item active' key={item.id}>
+            //   {item.action}
+            // </div>
           )
         })}
       </div>

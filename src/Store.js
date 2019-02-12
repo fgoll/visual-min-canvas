@@ -6,7 +6,7 @@ const win = window
 
 const reducer = combineReducers({
   canvas: CanvasReducer,
-  action: ToolReducer
+  tool: ToolReducer
 })
 
 let storeEnhancers = compose(

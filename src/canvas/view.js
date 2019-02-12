@@ -51,12 +51,16 @@ class Canvas extends React.Component {
   }
 
   handleMouseMove(e) {
-    if (!this.isDown) return 
+    let ctx = this.ctx
 
     const {offsetX, offsetY} = e
+    if (!this.isDown) {
+      
+      console.log(ctx.isPointInStroke(offsetX, offsetY))
+      
+      return 
+    }
 
-    let ctx = this.ctx
-    
     this.reDraw(ctx)
 
     switch (this.props.action) {
@@ -125,7 +129,7 @@ class Canvas extends React.Component {
 
   render() {
     return (
-      <div className='canvas' style={{'paddingTop': '50px'}}>
+      <div className='canvas' style={{'paddingTop': '50px', 'flex': 1, 'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center'}}>
         <canvas ref={this.refCanvas} width={375} height={667} style={{'border': '1px solid #efefef'}}></canvas>
       </div>
     )
@@ -140,7 +144,7 @@ Canvas.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    action: state.action,
+    action: state.tool.action,
     graphs: state.canvas
   }
 }
